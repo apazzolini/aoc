@@ -58,7 +58,7 @@ export function xor(a, b) {
   return a ? !b : !!b
 }
 
-export function Grid(sizeX, sizeY, fill) {
+export function Grid(sizeX, sizeY, fill, defaultOpts = {}) {
   const grid = Array(sizeX)
     .fill()
     .map(() => {
@@ -70,11 +70,11 @@ export function Grid(sizeX, sizeY, fill) {
     })
 
   grid.print = function print({
-    padSize = 0,
-    minX = 0,
-    minY = 0,
-    maxX = sizeX,
-    maxY = sizeY,
+    padSize = defaultOpts.padSize || 0,
+    minX = defaultOpts.minX || 0,
+    minY = defaultOpts.minY || 0,
+    maxX = defaultOpts.maxX || sizeX,
+    maxY = defaultOpts.maxY || sizeY,
   } = {}) {
     let str = '\n'
 
@@ -87,6 +87,86 @@ export function Grid(sizeX, sizeY, fill) {
 
     console.log(str)
   }
+
+  grid.copy = function copy() {
+    const copy = Grid(grid.length, grid[0].length, undefined, defaultOpts)
+    for (let x = 0; x < grid.length; x++) {
+      for (let y = 0; y < grid[0].length; y++) {
+        copy[x][y] = grid[x][y]
+      }
+    }
+    return copy
+  }
+
+  grid.equals = function equals(otherGrid) {
+    if (!otherGrid) return false
+    if (grid.length !== otherGrid.length) return false
+    if (grid[0].length !== otherGrid[0].length) return false
+
+    for (let x = 0; x < grid.length; x++) {
+      for (let y = 0; y < grid[0].length; y++) {
+        if (grid[x][y] !== otherGrid[x][y]) {
+          return false
+        }
+      }
+    }
+
+    return true
+  }
+
+  grid.count = function count(val) {
+    let res = 0
+
+    for (let x = 0; x < grid.length; x++) {
+      for (let y = 0; y < grid[0].length; y++) {
+        if (grid[x][y] === val) {
+          res++
+        }
+      }
+    }
+
+    return res
+  }
+
+  grid.neighbors4 = function neighbors8(x, y) {
+    const res = []
+
+    if (x - 1 >= 0) res.push({ x: x - 1, y })
+    if (x + 1 < grid.length) res.push({ x: x + 1, y })
+    if (y - 1 >= 0) res.push({ x, y: y - 1 })
+    if (y + 1 < grid[0].length) res.push({ x, y: y + 1 })
+
+    return res
+  }
+
+  grid.neighbors8 = function neighbors8(x, y) {
+    const res = []
+
+    for (let dx = -1; dx <= 1; dx++) {
+      for (let dy = -1; dy <= 1; dy++) {
+        if (dy === 0 && dx === 0) continue
+        if (x + dx < 0 || x + dx >= grid.length) continue
+        if (y + dy < 0 || y + dy >= grid[0].length) continue
+
+        res.push({ x: x + dx, y: y + dy })
+      }
+    }
+
+    return res
+  }
+
+  return grid
+}
+
+Grid.fromInput = function fromInput(input, defaultOpts) {
+  const lines = input.split('\n')
+  const grid = Grid(lines[0].length, lines.length, undefined, defaultOpts)
+
+  lines.forEach((l, y) => {
+    l.split('').forEach((c, x) => {
+      grid[x][y] = c
+    })
+  })
 
   return grid
 }
