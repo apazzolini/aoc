@@ -1,6 +1,7 @@
 import _ from 'lodash'
 
 // Returns Array<Number>
+// Deprecated
 export function linesToNumbers(input) {
   return input.split('\n').map(Number)
 }
@@ -29,6 +30,8 @@ export function manhattan(a, b) {
   return Math.abs(a.x - b.x) + Math.abs(a.y - b.y)
 }
 
+// Character-wise replacement of corresponding characters
+// translate('abaabbba', 'ab', 'cd') --> 'cdccdddc'
 export function translate(str, from, to) {
   const lookups = from.split('').reduce((acc, char, idx) => {
     acc[char] = to[idx]
@@ -42,7 +45,7 @@ export function translate(str, from, to) {
   return answer.join('')
 }
 
-// Cycle array. Usage:
+// Cycle array forever. Usage:
 // for (const elem of cycle(arr)) {
 //   console.log(elem)
 // }
@@ -56,6 +59,20 @@ export function* cycle(arr) {
 
 export function xor(a, b) {
   return a ? !b : !!b
+}
+
+// Extract consecutives of an array with overlaps. Usage:
+// for (const [a, b, c] of consecutives(arr, 3)) {
+//   console.log(elem)
+// }
+export function consecutives(arr, n = 2) {
+  const result = []
+
+  for (let i = 0; i < arr.length - n + 1; i++) {
+    result.push([arr.slice(i, i + n), i])
+  }
+
+  return result
 }
 
 export function Grid(sizeX, sizeY, fill, defaultOpts = {}) {
