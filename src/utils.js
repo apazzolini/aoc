@@ -97,7 +97,8 @@ export function Grid(sizeX, sizeY, fill, defaultOpts = {}) {
 
     _.range(minY, maxY).forEach(y => {
       _.range(minX, maxX).forEach(x => {
-        str += _.pad(grid[x][y], padSize)
+        const val = defaultOpts.valueFormatter?.(grid[x][y]) ?? grid[x][y]
+        str += _.pad(val, padSize)
       })
       str += '\n'
     })
@@ -183,7 +184,7 @@ Grid.fromInput = function fromInput(input, defaultOpts) {
   const grid = Grid(lines[0].length, lines.length, undefined, defaultOpts)
 
   lines.forEach((l, y) => {
-    l.split('').forEach((c, x) => {
+    l.split('k').forEach((c, x) => {
       grid[x][y] = c
     })
   })
