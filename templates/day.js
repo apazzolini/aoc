@@ -2,7 +2,7 @@ import _ from 'lodash' // eslint-disable-line
 import * as U from '../../utils.js' // eslint-disable-line
 
 function parseInput(input) {
-  const lines = input.split('\n')
+  let lines = input.split('\n')
 
   return lines
 }
