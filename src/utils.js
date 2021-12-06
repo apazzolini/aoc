@@ -7,8 +7,9 @@ export function linesToNumbers(input) {
 }
 
 // Returns Array<Number> of every number found in the line
-export function extractNumbers(str) {
-  return (str.match(/-?[0-9.,]+/g) || []).map(n => n.replace(/,/g, '')).map(Number)
+export function extractNumbers(str, commasAreSeparators = false) {
+  const regex = commasAreSeparators ? /-?[0-9.]+/g : /-?[0-9.,]+/g
+  return (str.match(regex) || []).map(n => n.replace(/,/g, '')).map(Number)
 }
 
 // Returns true if given Object has some key with a value matching val
