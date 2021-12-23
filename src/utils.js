@@ -172,6 +172,9 @@ export function Grid(sizeX, sizeY, fill, defaultOpts = {}) {
     return res
   }
 
+  grid.width = () => grid.length
+  grid.height = () => grid[0].length
+
   return grid
 }
 
