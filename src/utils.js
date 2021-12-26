@@ -185,7 +185,7 @@ Grid.fromInput = function fromInput(input, defaultOpts) {
   const grid = Grid(lines[0].length, lines.length, undefined, defaultOpts)
 
   lines.forEach((l, y) => {
-    l.split('k').forEach((c, x) => {
+    l.split('').forEach((c, x) => {
       grid[x][y] = c
     })
   })
