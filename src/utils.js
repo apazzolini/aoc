@@ -12,6 +12,12 @@ export function extractNumbers(str, commasAreSeparators = false) {
   return (str.match(regex) || []).map(n => n.replace(/,/g, '')).map(Number)
 }
 
+// Returns Array<Number> of every digit found in the line
+export function extractDigits(str) {
+  const regex = /-?[0-9]/g
+  return (str.match(regex) || []).map(n => n.replace(/,/g, '')).map(Number)
+}
+
 // Returns true if given Object has some key with a value matching val
 export function hasVal(obj, val) {
   return Object.values(obj).some(v => v === val)

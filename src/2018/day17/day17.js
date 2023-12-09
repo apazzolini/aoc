@@ -1,4 +1,4 @@
-import { Grid } from '../../utils.js'
+  import { Grid } from '../../utils.js'
 
 const buildGrid = input => {
   const lines = input.split('\n')

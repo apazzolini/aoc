@@ -14,7 +14,7 @@ describe('2020 day 05', () => {
   describe('part 2', () => {
     test('solves an example', () => {
       // No test for part 2
-      expect().toEqual()
+      // expect().toEqual()
     })
   })
 })

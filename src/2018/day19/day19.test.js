@@ -14,7 +14,7 @@ describe('2018 day 19', () => {
     `)
 
   describe('part 1', () => {
-    test.only('solves an example', () => {
+    test('solves an example', () => {
       const answer = solvePart1(example)
       expect(answer).toEqual(6)
     })

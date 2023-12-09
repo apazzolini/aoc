@@ -8,10 +8,4 @@ describe('2019 day 02', () => {
       expect(solvePart1('1,1,1,4,99,5,6,0,99', true)).toEqual(30)
     })
   })
-
-  describe('part 2', () => {
-    test('solves an example', () => {
-      expect().toEqual()
-    })
-  })
 })

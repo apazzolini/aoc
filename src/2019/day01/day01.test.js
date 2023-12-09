@@ -13,7 +13,7 @@ describe('2019 day 01', () => {
   })
 
   describe('part 2', () => {
-    test.only('solves an example', () => {
+    test('solves an example', () => {
       expect(solvePart2(`1969`)).toEqual(966)
     })
   })

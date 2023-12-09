@@ -2,13 +2,12 @@ import { performance as perf } from 'perf_hooks'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import fetch from 'node-fetch'
 import chalk from 'chalk'
 import clipboardy from 'clipboardy'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const run = async (year, day, part) => {
+async function run(year: string, day: string, part: string) {
   const dayBase = path.join(__dirname, year, `day${day}`)
   const dayModule = await import(path.join(dayBase, `day${day}.js`))
   const inputPath = path.join(dayBase, `day${day}`)
