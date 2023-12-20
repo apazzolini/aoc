@@ -115,6 +115,14 @@ export class Grid<T> extends Array<Array<T>> {
     return res;
   }
 
+  line(y: number) {
+    const res = new Array(this.width());
+    for (let x = 0; x < this.width(); x++) {
+      res[x] = this[x][y];
+    }
+    return res;
+  }
+
   // get length() {
   //   return this.grid.length;
   // }
