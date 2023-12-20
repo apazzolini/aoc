@@ -13,21 +13,35 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
-    'strict': ['error', 'global'],
-    'curly': 'off',
-    'no-unused-vars': [2, { args: 'none', argsIgnorePattern: "^_" }],
+    strict: ['error', 'global'],
+    curly: 'off',
+    'no-unused-vars': [2, { args: 'none', argsIgnorePattern: '^_' }],
     'no-use-before-define': 'error',
     'no-prototype-builtins': 'off',
     'prefer-const': 'off',
     'no-constant-condition': 'off',
 
+    'import/default': 'off',
+    'import/extensions': ['error', 'never', { json: 'always' }],
     'import/first': 'error',
-    'import/order': ['error', { groups: [['builtin', 'external', 'internal']] }],
-    'import/newline-after-import': 'error',
+    'import/namespace': 'off',
+    'import/no-duplicates': 'error',
+    'import/no-named-as-default-member': 'off',
+    'import/no-useless-path-segments': 'error',
+    'import/no-unresolved': 'error',
+  },
+  settings: {
+    'import/external-module-folders': ['node_modules'],
+    'import/resolver': {
+      typescript: {},
+    },
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.d.ts'],
+    },
   },
   globals: {
-    'describe': true,
-    'expect': true,
-    'test': true,
-  }
-}
+    describe: true,
+    expect: true,
+    test: true,
+  },
+};

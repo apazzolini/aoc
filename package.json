@@ -6,7 +6,7 @@
   "repository": "https://github.com/apazzolini/advent-of-code",
   "author": "Andre Azzolini (apazzolini)",
   "scripts": {
-    "check": "bun run lint && bun test",
+    "check": "bun run lint && prettier --check src && bun test",
     "generate": "bun src/generate-skeleton.ts",
     "lint": "eslint -c .eslintrc.cjs src",
     "solve": "bun src/main.ts",
@@ -20,6 +20,7 @@
     "bun-types": "latest",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.0",
     "prettier": "2",
     "typescript": "^5.3.2"

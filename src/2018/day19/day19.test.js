@@ -1,5 +1,5 @@
-import { solvePart1 } from './day19.js'
-import { trim } from '../../utils.js'
+import { solvePart1 } from './day19.js';
+import { trim } from '../../utils';
 
 describe('2018 day 19', () => {
   const example = trim(`
@@ -11,12 +11,12 @@ describe('2018 day 19', () => {
         setr 1 0 0
         seti 8 0 4
         seti 9 0 5
-    `)
+    `);
 
   describe('part 1', () => {
     test('solves an example', () => {
-      const answer = solvePart1(example)
-      expect(answer).toEqual(6)
-    })
-  })
-})
+      const answer = solvePart1(example);
+      expect(answer).toEqual(6);
+    });
+  });
+});

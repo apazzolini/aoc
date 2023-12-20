@@ -1,5 +1,5 @@
 import _ from 'lodash'; // eslint-disable-line
-import * as U from '../../utils.js'; // eslint-disable-line
+import * as U from '../../utils'; // eslint-disable-line
 
 function parseInput(input) {
   let lines = input.split('\n');

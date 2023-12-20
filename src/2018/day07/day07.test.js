@@ -1,5 +1,5 @@
-import { solvePart1, solvePart2 } from './day07.js'
-import { trim } from '../../utils.js'
+import { solvePart1, solvePart2 } from './day07.js';
+import { trim } from '../../utils';
 
 describe('2018 day 07', () => {
   const example = trim(`
@@ -10,19 +10,19 @@ describe('2018 day 07', () => {
         Step B must be finished before step E can begin.
         Step D must be finished before step E can begin.
         Step F must be finished before step E can begin.
-    `)
+    `);
 
   describe('part 1', () => {
     test('solves an example', () => {
-      const answer = solvePart1(example)
-      expect(answer).toEqual('CABDFE')
-    })
-  })
+      const answer = solvePart1(example);
+      expect(answer).toEqual('CABDFE');
+    });
+  });
 
   describe('part 2', () => {
     test('solves an example', () => {
-      const answer = solvePart2(example)
-      expect(answer).toEqual(15)
-    })
-  })
-})
+      const answer = solvePart2(example);
+      expect(answer).toEqual(15);
+    });
+  });
+});

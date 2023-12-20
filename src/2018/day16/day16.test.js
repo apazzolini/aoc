@@ -1,4 +1,4 @@
-import { solvePart1 } from './day16.js'
+import { solvePart1 } from './day16.js';
 
 describe('2018 day 16', () => {
   const example = `Before: [3, 2, 1, 1]
@@ -8,12 +8,12 @@ After:  [3, 2, 2, 1]
 
 
 123
-456`
+456`;
 
   describe('part 1', () => {
     test('solves an example', () => {
-      const answer = solvePart1(example)
-      expect(answer).toEqual(1)
-    })
-  })
-})
+      const answer = solvePart1(example);
+      expect(answer).toEqual(1);
+    });
+  });
+});

@@ -1,5 +1,5 @@
-import { solvePart1, solvePart2 } from './day04.js' // eslint-disable-line
-import * as U from '../../utils.js' // eslint-disable-line
+import { solvePart1, solvePart2 } from './day04.js'; // eslint-disable-line
+import * as U from '../../utils'; // eslint-disable-line
 
 describe('2021 day 04', () => {
   const example = `7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
@@ -20,17 +20,17 @@ describe('2021 day 04', () => {
 10 16 15  9 19
 18  8 23 26 20
 22 11 13  6  5
- 2  0 12  3  7`
+ 2  0 12  3  7`;
 
   describe('part 1', () => {
     test('solves an example', () => {
-      expect(solvePart1(example)).toEqual(4512)
-    })
-  })
+      expect(solvePart1(example)).toEqual(4512);
+    });
+  });
 
   describe('part 2', () => {
     test('solves an example', () => {
-      expect(solvePart2(example)).toEqual(1924)
-    })
-  })
-})
+      expect(solvePart2(example)).toEqual(1924);
+    });
+  });
+});

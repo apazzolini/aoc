@@ -1,5 +1,5 @@
-import { solvePart1, solvePart2 } from './day07.js' // eslint-disable-line
-import * as U from '../../utils.js' // eslint-disable-line
+import { solvePart1, solvePart2 } from './day07.js'; // eslint-disable-line
+import * as U from '../../utils'; // eslint-disable-line
 
 describe('2020 day 07', () => {
   const example = U.trim(`
@@ -12,7 +12,7 @@ describe('2020 day 07', () => {
     vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
     faded blue bags contain no other bags.
     dotted black bags contain no other bags.
-  `)
+  `);
 
   const example2 = U.trim(`
     shiny gold bags contain 2 dark red bags.
@@ -22,18 +22,18 @@ describe('2020 day 07', () => {
     dark green bags contain 2 dark blue bags.
     dark blue bags contain 2 dark violet bags.
     dark violet bags contain no other bags.
-  `)
+  `);
 
   describe('part 1', () => {
     test('solves an example', () => {
-      expect(solvePart1(example)).toEqual(4)
-    })
-  })
+      expect(solvePart1(example)).toEqual(4);
+    });
+  });
 
   describe('part 2', () => {
     test('solves an example', () => {
-      expect(solvePart2(example)).toEqual(32)
-      expect(solvePart2(example2)).toEqual(126)
-    })
-  })
-})
+      expect(solvePart2(example)).toEqual(32);
+      expect(solvePart2(example2)).toEqual(126);
+    });
+  });
+});

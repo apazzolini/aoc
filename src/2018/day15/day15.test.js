@@ -1,5 +1,5 @@
-import { solvePart1, solvePart2 } from './day15.js'
-import { trim } from '../../utils.js'
+import { solvePart1, solvePart2 } from './day15.js';
+import { trim } from '../../utils';
 
 describe('2018 day 15', () => {
   describe('part 1', () => {
@@ -12,10 +12,10 @@ describe('2018 day 15', () => {
                 #..G#E#
                 #.....#
                 #######
-            `)
-      const answer = solvePart1(example)
-      expect(answer).toEqual(27730)
-    })
+            `);
+      const answer = solvePart1(example);
+      expect(answer).toEqual(27730);
+    });
 
     test('solves example 2', () => {
       const example = trim(`
@@ -26,10 +26,10 @@ describe('2018 day 15', () => {
                 #...#E#
                 #...E.#
                 #######
-            `)
-      const answer = solvePart1(example)
-      expect(answer).toEqual(36334)
-    })
+            `);
+      const answer = solvePart1(example);
+      expect(answer).toEqual(36334);
+    });
 
     test('solves example 3', () => {
       const example = trim(`
@@ -40,10 +40,10 @@ describe('2018 day 15', () => {
                 #G..#.#
                 #..E#.#
                 #######
-            `)
-      const answer = solvePart1(example)
-      expect(answer).toEqual(39514)
-    })
+            `);
+      const answer = solvePart1(example);
+      expect(answer).toEqual(39514);
+    });
 
     test('solves example 4', () => {
       const example = trim(`
@@ -54,10 +54,10 @@ describe('2018 day 15', () => {
                 #G..#.#
                 #...E.#
                 #######
-            `)
-      const answer = solvePart1(example)
-      expect(answer).toEqual(27755)
-    })
+            `);
+      const answer = solvePart1(example);
+      expect(answer).toEqual(27755);
+    });
 
     test('solves example 5', () => {
       const example = trim(`
@@ -68,10 +68,10 @@ describe('2018 day 15', () => {
                 #E#G#G#
                 #...#G#
                 #######
-            `)
-      const answer = solvePart1(example)
-      expect(answer).toEqual(28944)
-    })
+            `);
+      const answer = solvePart1(example);
+      expect(answer).toEqual(28944);
+    });
 
     test('solves example 6', () => {
       const example = trim(`
@@ -84,11 +84,11 @@ describe('2018 day 15', () => {
                 #.G...G.#
                 #.....G.#
                 #########
-            `)
-      const answer = solvePart1(example)
-      expect(answer).toEqual(18740)
-    })
-  })
+            `);
+      const answer = solvePart1(example);
+      expect(answer).toEqual(18740);
+    });
+  });
 
   describe('part 2', () => {
     test('solves example 1', () => {
@@ -100,10 +100,10 @@ describe('2018 day 15', () => {
                 #..G#E#
                 #.....#
                 #######
-            `)
-      const answer = solvePart2(example)
-      expect(answer).toEqual(4988)
-    })
+            `);
+      const answer = solvePart2(example);
+      expect(answer).toEqual(4988);
+    });
 
     test('solves example 2', () => {
       const example = trim(`
@@ -116,9 +116,9 @@ describe('2018 day 15', () => {
                 #.G...G.#
                 #.....G.#
                 #########
-            `)
-      const answer = solvePart2(example)
-      expect(answer).toEqual(1140)
-    })
-  })
-})
+            `);
+      const answer = solvePart2(example);
+      expect(answer).toEqual(1140);
+    });
+  });
+});

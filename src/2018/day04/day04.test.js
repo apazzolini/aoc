@@ -1,5 +1,5 @@
-import { solvePart1, solvePart2 } from './day04.js'
-import { trim } from '../../utils.js'
+import { solvePart1, solvePart2 } from './day04.js';
+import { trim } from '../../utils';
 
 const example = trim(`
     [1518-11-01 00:00] Guard #10 begins shift
@@ -19,20 +19,20 @@ const example = trim(`
     [1518-11-05 00:03] Guard #99 begins shift
     [1518-11-05 00:45] falls asleep
     [1518-11-05 00:55] wakes up
-`)
+`);
 
 describe('2018 day 04', () => {
   describe('part 1', () => {
     test('solves an example', () => {
-      const answer = solvePart1(example)
-      expect(answer).toEqual(240)
-    })
-  })
+      const answer = solvePart1(example);
+      expect(answer).toEqual(240);
+    });
+  });
 
   describe('part 2', () => {
     test('solves an example', () => {
-      const answer = solvePart2(example)
-      expect(answer).toEqual(4455)
-    })
-  })
-})
+      const answer = solvePart2(example);
+      expect(answer).toEqual(4455);
+    });
+  });
+});

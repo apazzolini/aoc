@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test'; // eslint-disable-line
 import { solvePart1, solvePart2 } from './dayDD.ts'; // eslint-disable-line
-import * as U from '../../utils.js'; // eslint-disable-line
+import * as U from '../../utils'; // eslint-disable-line
 
 describe('YYYY day DD', () => {
   const example = ``;

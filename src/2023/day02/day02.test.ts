@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'bun:test'; // eslint-disable-line
 import { solvePart1, solvePart2 } from './day02.ts'; // eslint-disable-line
-import * as U from '../../utils.js'; // eslint-disable-line
+import * as U from '../../utils'; // eslint-disable-line
 
 describe('2023 day 02', () => {
   const example = `Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green

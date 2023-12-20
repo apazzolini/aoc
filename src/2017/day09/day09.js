@@ -1,28 +1,28 @@
-const withoutNegated = input => input.replace(/!./g, '')
-const withoutGarbage = input => input.replace(/<.*?>/g, '')
-const clean = input => withoutGarbage(withoutNegated(input))
+const withoutNegated = (input) => input.replace(/!./g, '');
+const withoutGarbage = (input) => input.replace(/<.*?>/g, '');
+const clean = (input) => withoutGarbage(withoutNegated(input));
 
-export const solvePart1 = input => {
-  let total = 0
-  let score = 0
+export const solvePart1 = (input) => {
+  let total = 0;
+  let score = 0;
 
   for (const char of clean(input)) {
     if (char === '{') {
-      score++
+      score++;
     }
 
     if (char === '}') {
-      total += score
-      score--
+      total += score;
+      score--;
     }
   }
 
-  return total
-}
+  return total;
+};
 
-export const solvePart2 = input => {
+export const solvePart2 = (input) => {
   const lengths = withoutNegated(input)
     .match(/<.*?>/g)
-    .map(g => g.length - 2)
-  return lengths.reduce((acc, gl) => acc + gl, 0)
-}
+    .map((g) => g.length - 2);
+  return lengths.reduce((acc, gl) => acc + gl, 0);
+};
