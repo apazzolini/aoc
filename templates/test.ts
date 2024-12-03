@@ -7,13 +7,13 @@ describe('YYYY day DD', () => {
 
   describe('part 1', () => {
     test('solves an example', () => {
-      expect(solvePart1(example)).toEqual();
+      expect(solvePart1(example)).toEqual(undefined);
     });
   });
 
   describe('part 2', () => {
     test('solves an example', () => {
-      expect(solvePart2(example)).toEqual();
+      expect(solvePart2(example)).toEqual(undefined);
     });
   });
 });
