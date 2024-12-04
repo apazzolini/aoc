@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 // Returns Array<Number>
 // Deprecated
 export function linesToNumbers(input) {
