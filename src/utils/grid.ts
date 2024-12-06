@@ -135,6 +135,10 @@ export class Grid<T> extends Array<Array<T>> {
     return this[0].length;
   }
 
+  inBounds(x: number, y: number) {
+    return !(x < 0 || x >= this.length || y < 0 || y >= this[0].length);
+  }
+
   static fromInput(input: string, defaultOpts?: GridOpts) {
     const lines = input.split('\n');
     const grid = new Grid<string>(lines[0].length, lines.length, undefined, defaultOpts);
