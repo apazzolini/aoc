@@ -5,7 +5,7 @@ export function linesToNumbers(input) {
 }
 
 // Returns Array<Number> of every number found in the line
-export function extractNumbers(str, commasAreSeparators = false) {
+export function extractNumbers(str, commasAreSeparators = false): number[] {
   const regex = commasAreSeparators ? /-?[0-9.]+/g : /-?[0-9.,]+/g;
   return (str.match(regex) || []).map((n) => n.replace(/,/g, '')).map(Number);
 }
