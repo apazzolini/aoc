@@ -31,7 +31,7 @@ export function trim(str) {
 }
 
 // Manhattan distance between pairs of { x: Number, y: Number } objects
-export function manhattan(a, b) {
+export function manhattan(a: { x: number; y: number }, b: { x: number; y: number }) {
   return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 }
 
