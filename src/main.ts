@@ -14,7 +14,7 @@ async function run(year: string, day: string, part: string) {
 
   if (!fs.existsSync(inputPath)) {
     const d = day.startsWith('0') ? day.substring(1) : day;
-    const res = await fetch(`http://adventofcode.com/${year}/day/${d}/input`, {
+    const res = await fetch(`https://adventofcode.com/${year}/day/${d}/input`, {
       headers: {
         Cookie: `session=${process.env.SESSION}`,
       },
