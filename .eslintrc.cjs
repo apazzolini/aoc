@@ -28,7 +28,12 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/no-named-as-default-member': 'off',
     'import/no-useless-path-segments': 'error',
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': [
+      'error',
+      {
+        ignore: ['^bun(:\\w+)?$'],
+      },
+    ],
   },
   settings: {
     'import/external-module-folders': ['node_modules'],

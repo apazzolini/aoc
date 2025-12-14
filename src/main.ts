@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import chalk from 'chalk';
-import clipboardy from 'clipboardy';
+import { $ } from 'bun';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -42,6 +42,6 @@ async function run(year: string, day: string, part: string) {
 run(process.argv[2], process.argv[3], process.argv[4])
   .then(({ answer, time }) => {
     console.log(`>>> ${chalk.red(answer)} <<< in ${chalk.green(`${time.toFixed(2)}ms`)}`);
-    clipboardy.writeSync(answer);
+    return $`echo -n ${answer} | pbcopy`;
   })
   .catch((e) => console.error(e));
